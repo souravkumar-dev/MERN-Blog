@@ -1,0 +1,37 @@
+{
+  "name": "inkflow-blogging-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "server": "node server/index.js",
+    "server:dev": "nodemon server/index.js",
+    "client": "npm --prefix client run dev -- --host 0.0.0.0",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client\"",
+    "build": "npm --prefix client run build",
+    "start": "node server/index.js",
+    "test": "node --test server/tests/*.test.js"
+  },
+  "keywords": [
+    "blog",
+    "react",
+    "express",
+    "inkflow"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb-memory-server": "^10.0.0",
+    "mongoose": "^8.8.4",
+    "multer": "^2.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "nodemon": "^3.1.14"
+  }
+}
